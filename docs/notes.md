@@ -1,4 +1,4 @@
-# Intoducing software development best practices for the behavioral and social sciences
+# Introducing software development best practices for the behavioral and social sciences
 
 ## Keep in mind:
 
@@ -45,17 +45,18 @@ I'm coming from my personal experience analyzing data and writing code for resea
 |  |LICENSE.txt
 |  |requirements.txt
 |  |--\code
-|  |  |--cool_script.py
-|  |  |--helper_script.py
+|  |  |--cool-script.py
+|  |  |--helper-script.py
 |  |--\data
-|  |  |--fantastic_data.csv
-|  |  |--fantastic_data_schema.csv
+|  |  |--fantastic-data.csv
+|  |  |--fantastic-data_schema.csv
 |  |--\docs
-|  |  |--brilliant_manuscript.pdf
+|  |  |--brilliant-manuscript.pdf
 |  |--\results
-|  |  |--fig_1.tiff
-|  |  |--fig_2.tiff
-|  |  |--table1.tiff
+|  |  |--fig-1.tiff
+|  |  |--fig-2.tiff
+|  |  |--table-1.tiff
+|  |  |--table-2.tiff
 ```
 
 ### X. Use virtual environments
@@ -63,7 +64,7 @@ I'm coming from my personal experience analyzing data and writing code for resea
 - For Python virtualenv or conda environment; for R conda environment
 
 ### X. Use version control systems
-- Git, Mercurial, or Suversion
+- Git, Mercurial, or SVN
 - Push changes frequently
 - Use branches for experimentation
 - Use a third backup (safe) backup system with continuous sync (Box, Dropbox, Drive, Mega, etc.)
@@ -71,11 +72,15 @@ I'm coming from my personal experience analyzing data and writing code for resea
 ### 3. Use version control systems
 - Optimized for plain text. Not that good for tabular data, docx, or PDFs.
 - Bad for "large" files (limited to 100 megabytes per file in GitHub).
-- If files are too large: zip the files (Ok solution). Read data from the web (Better solution)
+- If files are too large: zip the files (OK solution). Read data from the web (Better solution)
 - Raw should not change, and therefore, should not require version tracking
 - Keep minimal notes/log of major changes
 
-
+## Documentation:
+	- README.md
+  - LICENSE.txt
+	- requirements.txt
+	- to-do.txt
 
 ### X. Modularization
 
@@ -90,12 +95,7 @@ I'm coming from my personal experience analyzing data and writing code for resea
 
 - Avoid Premature Optimization
 
-- Documentation:
-	- README.txt
-	- requirements.txt
-	- to-do.txt
-	- results.txt
-	- LICENSE.txt
+
 
 - Testing
 

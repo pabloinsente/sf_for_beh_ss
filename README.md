@@ -82,12 +82,12 @@ pip3 install numpy pandas altair jupyterlab watermark scikit-learn
 ```
 - Create requirements file with current dependencies:
 ```
-pip freeze > requirements.txt```
+pip freeze > requirements.txt
+```
 - To deactivate the environment:
 ```
 deactivate
 ```
-
 - If you want to delete the environment run
 ```
 rm -rf env/
@@ -101,7 +101,8 @@ git --version
 - If you need to install git, got to [this link](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)and follow installation instructions for your system
 - Then, inside your project directory, check the git status:
 ```
-git status```
+git status
+```
 - Initialize git repository and tracking:
 ````
 git init
@@ -119,7 +120,7 @@ git add .
 git commit -m "First commit"
 ```
 - Go to [https://github.com/](https://github.com/) and create a new empty repository with the same name as your local repository. Then copy the remote repository URL
-- Add the URL for the remore repository to your local repository:
+- Add the URL for the remote repository to your local repository:
 ```
 git remote add origin remote repository GITHUB_URL#
 ```

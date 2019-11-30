@@ -1,0 +1,86 @@
+{
+    "graph": {
+        "_type": "graph",
+        "format": "keras",
+        "nodes": [
+            {
+                "name": "dense_input",
+                "id": "dense_input",
+                "class_name": "InputLayer",
+                "output_shape": [
+                    [
+                        null,
+                        968
+                    ]
+                ],
+                "num_parameters": 0
+            },
+            {
+                "name": "dense",
+                "id": "dense",
+                "class_name": "Dense",
+                "output_shape": [
+                    null,
+                    128
+                ],
+                "num_parameters": 124032
+            },
+            {
+                "name": "dense_1",
+                "id": "dense_1",
+                "class_name": "Dense",
+                "output_shape": [
+                    null,
+                    128
+                ],
+                "num_parameters": 16512
+            },
+            {
+                "name": "dropout",
+                "id": "dropout",
+                "class_name": "Dropout",
+                "output_shape": [
+                    null,
+                    128
+                ],
+                "num_parameters": 0
+            },
+            {
+                "name": "dense_2",
+                "id": "dense_2",
+                "class_name": "Dense",
+                "output_shape": [
+                    null,
+                    1
+                ],
+                "num_parameters": 129
+            }
+        ],
+        "edges": [
+            [
+                "dense_input",
+                "dense"
+            ],
+            [
+                "dense",
+                "dense_1"
+            ],
+            [
+                "dense_1",
+                "dropout"
+            ],
+            [
+                "dropout",
+                "dense_2"
+            ]
+        ]
+    },
+    "_runtime": 11.897327423095703,
+    "_step": 99,
+    "_timestamp": 1575153995.8579607,
+    "val_loss": 0.8576078414916992,
+    "val_accuracy": 0.686170220375061,
+    "epoch": 99,
+    "accuracy": 1.0,
+    "loss": 0.19735450867244175
+}

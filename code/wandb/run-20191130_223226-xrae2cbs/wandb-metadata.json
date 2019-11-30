@@ -1,0 +1,23 @@
+{
+    "root": "/home/pablo/Desktop/projects/sf_for_beh_ss",
+    "program": "tech_mental_health_nn.py",
+    "git": {
+        "remote": "https://github.com/pabloinsente/sf_for_beh_ss.git",
+        "commit": "833619d9fa2113c365c637053382102e015c0e97"
+    },
+    "email": "pcaceres@wisc.edu",
+    "startedAt": "2019-11-30T22:32:26.069407",
+    "host": "jarvis",
+    "username": "pablo",
+    "executable": "/home/pablo/Desktop/projects/sf_for_beh_ss/env/bin/python3",
+    "os": "Linux-5.0.0-36-generic-x86_64-with-debian-buster-sid",
+    "python": "3.7.3",
+    "cpu_count": 8,
+    "args": [],
+    "state": "failed",
+    "jobType": null,
+    "mode": "run",
+    "project": "my-awesome-project",
+    "heartbeatAt": "2019-11-30T22:32:27.683667",
+    "exitcode": 1
+}

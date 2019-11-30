@@ -1,0 +1,7 @@
+Pearson Chi-square: 175.95516961872426
+P-value: 3.703610823400622e-40
+Degrees of freedom: 1
+Expected frequencies
+             No         Yes
+No   377.040767  241.959233
+Yes  384.959233  247.040767

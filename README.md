@@ -132,6 +132,17 @@ git remote -v
 ```
 git push origin master
 ```
+### Set up machine learning experiment tracking
+- To install Weight and Biases:
+```
+pip install wandb
+```
+- To sing up or login to an existing account:
+```
+wandb login
+```
+- Past the API key to the console and you are ready to roll
+- Further wandb configuration is explained in the scripts
 
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)

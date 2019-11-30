@@ -104,9 +104,9 @@ git --version
 git status
 ```
 - Initialize git repository and tracking:
-````
-git init
 ```
+git init
+````
 - Create and add .gitignore file
 ```
 touch .gitignore

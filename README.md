@@ -1,4 +1,4 @@
-# Introducing software development best practices for the behavioral and social sciences
+# Introducing software development best practices for research in the behavioral and social sciences
 
 **Author**: Pablo Caceres  
 **Contact**: pcaceres@wisc.edu  

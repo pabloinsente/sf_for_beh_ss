@@ -1,0 +1,82 @@
+{
+    "graph": {
+        "_type": "graph",
+        "format": "keras",
+        "nodes": [
+            {
+                "name": "dense_input",
+                "id": "dense_input",
+                "class_name": "InputLayer",
+                "output_shape": [
+                    [
+                        null,
+                        968
+                    ]
+                ],
+                "num_parameters": 0
+            },
+            {
+                "name": "dense",
+                "id": "dense",
+                "class_name": "Dense",
+                "output_shape": [
+                    null,
+                    64
+                ],
+                "num_parameters": 62016
+            },
+            {
+                "name": "dense_1",
+                "id": "dense_1",
+                "class_name": "Dense",
+                "output_shape": [
+                    null,
+                    64
+                ],
+                "num_parameters": 4160
+            },
+            {
+                "name": "dropout",
+                "id": "dropout",
+                "class_name": "Dropout",
+                "output_shape": [
+                    null,
+                    64
+                ],
+                "num_parameters": 0
+            },
+            {
+                "name": "dense_2",
+                "id": "dense_2",
+                "class_name": "Dense",
+                "output_shape": [
+                    null,
+                    1
+                ],
+                "num_parameters": 65
+            }
+        ],
+        "edges": [
+            [
+                "dense_input",
+                "dense"
+            ],
+            [
+                "dense",
+                "dense_1"
+            ],
+            [
+                "dense_1",
+                "dropout"
+            ],
+            [
+                "dropout",
+                "dense_2"
+            ]
+        ]
+    },
+    "epoch": 0,
+    "_step": 0,
+    "_timestamp": 1575152162.0448556,
+    "_runtime": 1.8874642848968506
+}

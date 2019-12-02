@@ -1,6 +1,7 @@
 Pearson Chi-square: 175.95516961872426
 P-value: 3.703610823400622e-40
 Degrees of freedom: 1
+Test interpretation: reject null hypothesis
 Expected frequencies
              No         Yes
 No   377.040767  241.959233

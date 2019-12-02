@@ -1,0 +1,219 @@
+diff --git a/README.md b/README.md
+index 8324d38..9e8f010 100644
+--- a/README.md
++++ b/README.md
+@@ -10,12 +10,12 @@ In this talk I provide a **few simple principles** that require relatively **low
+ 
+ ## Getting started
+ 
+-To obtain the files locally:  
++To obtain the files locally  
+ ```
+ git clone https://github.com/pabloinsente/sf_for_beh_ss.git
+ ```
+ 
+-To set up your system to run the examples, you need python 3.6.X installed in a Linux/Mac machine. Then install dependencies by running:
++To set up your system to run the examples, you need python 3.6.X installed in a Linux/Mac machine. Then install dependencies by running
+ 
+ ```
+ cd sf_for_beh_ss
+@@ -26,65 +26,65 @@ pip install -r requirements.txt
+ 
+ The slides are provided in the ```/docs``` directory. Python scripts and jupyter notebooks are provided in the ```/code``` directory
+ 
+-## Turorial Instructions:
++## Turorial Instructions
+ 
+ ### Create simple and well-organized data file system
+ 
+-- Create project directory:
++- Create project directory
+ ```
+ mkdir my_awesome_project
+ cd my_awesome_project
+ ```
+-- Create repo documentation files:
++- Create repo documentation files
+ ```
+ touch README.md requirements.txt LICENSE.txt
+ ```  
+-- Create main folders:
++- Create main folders
+ ```
+-mkdir code data docs results
++mkdir code data docs results test
+ ```  
+-- Create scripts fillers:
++- Create scripts fillers
+ ```
+ touch ./code/cool_script.ipynb
+ touch ./code/helper_script.py
+ ```
+-- Create file fillers:
++- Create file fillers
+ ```
+ touch ./docs/brilliant-manuscript.pdf
+ touch ./results/fake-plot.png
+ ```
+ 
+ ### Use virtual environments
+-- Check python installation and version:
++- Check python installation and version
+ ```
+ python --version
+ ```
+ - We need Python 3.6 installed. If you don't have it, go to [this link](https://www.python.org/downloads/) and look for version 3.6.9 and follow the installation instructions.
+-- Create virtual environment:
++- Create virtual environment
+ ```
+ python3 -m venv env
+ ```
+-- Activate virtual environment:
++- Activate virtual environment
+ ```
+ source env/bin/activate
+ ```
+-- Chec venv creation:
++- Chec venv creation
+ ```
+ which python
+ ```
+-- Check current packages:
++- Check current packages
+ ```
+ pip3 list
+ ```  
+-- Install some packages:
++- Install some packages
+ ```
+ pip3 install numpy pandas altair jupyterlab watermark scikit-learn
+ ```
+-- Create requirements file with current dependencies:
++- Create requirements file with current dependencies
+ ```
+ pip freeze > requirements.txt
+ ```
+-- To deactivate the environment:
++- To deactivate the environment
+ ```
+ deactivate
+ ```
+@@ -94,16 +94,16 @@ rm -rf env/
+ ```
+ 
+ ### Use version control systems
+-- Check git installation:
++- Check git installation
+ ```
+ git --version
+ ```
+ - If you need to install git, got to [this link](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)and follow installation instructions for your system
+-- Then, inside your project directory, check the git status:
++- Then, inside your project directory, check the git status
+ ```
+ git status
+ ```
+-- Initialize git repository and tracking:
++- Initialize git repository and tracking
+ ```
+ git init
+ ````
+@@ -111,20 +111,20 @@ git init
+ ```
+ touch .gitignore
+ ```
+-- Add files to local repository. This stages the files to be committed:
++- Add files to local repository. This stages the files to be committed
+ ```
+ git add .
+ ```
+-- Commit staged files and prepares them to be pushed to the remote repository:
++- Commit staged files and prepares them to be pushed to the remote repository
+ ```
+ git commit -m "First commit"
+ ```
+ - Go to [https://github.com/](https://github.com/) and create a new empty repository with the same name as your local repository. Then copy the remote repository URL
+-- Add the URL for the remote repository to your local repository:
++- Add the URL for the remote repository to your local repository
+ ```
+ git remote add origin remote repository GITHUB_URL#
+ ```
+-- Check new remote:
++- Check new remote
+ ```
+ git remote -v
+ ```
+@@ -134,16 +134,27 @@ git push origin master
+ ```
+ 
+ ### Set up machine learning experiment tracking
+-- To install Weight and Biases:
++- To install Weight and Biases
+ ```
+ pip install wandb
+ ```
+-- To sing up or login to an existing account:
++- To sing up or login to an existing account
+ ```
+ wandb login
+ ```
+ - Past the API key to the console and you are ready to roll
+ - Further wandb configuration is explained in the scripts
+ 
++### Testing your code
++- To install pytest run
++```
++pip install pytest
++```
++- Check pytest installation
++```
++pytest --version
++```
++- ```pytest``` will search for files that have **test_something.py** or **something_test.py** (note the **test** keyword), and run any function or method beginning with **test**
++
+ ## License
+ [MIT](https://choosealicense.com/licenses/mit/)
+diff --git a/code/tech_mental_health_ml.py b/code/tech_mental_health_ml.py
+index 65b9e04..35ac2ea 100644
+--- a/code/tech_mental_health_ml.py
++++ b/code/tech_mental_health_ml.py
+@@ -34,12 +34,14 @@ X_train, X_test, y_train, y_test = train_test_split(
+ cat_cols = X_train.columns # get col names
+ 
+ # create one-hot encoder object to transform all features at once
+-preprocessor = ColumnTransformer([  
+-    ("one_hot", OneHotEncoder(sparse=False, handle_unknown='ignore'), cat_cols)
+-    ]) 
++def preprocessor():
++    preprocessor = ColumnTransformer([  
++        ("one_hot", OneHotEncoder(sparse=False, handle_unknown='ignore'), cat_cols)
++        ]) 
++    return preprocessor
+ 
+ # fit and save preprocessor
+-transform = preprocessor.fit(X_train)
++transform = preprocessor().fit(X_train)
+ 
+ # one-hot encode for training and testing
+ X_train_transform = transform.transform(X_train)
+diff --git a/docs/notes.md b/docs/notes.md
+index de696dd..8bf9057 100644
+--- a/docs/notes.md
++++ b/docs/notes.md
+@@ -47,6 +47,7 @@ All new statistics and machine learning are created in FOSS
+ |  |--\code
+ |  |  |--cool-script.py
+ |  |  |--helper-script.py
++|  |  |--run-experiment.sh
+ |  |--\data
+ |  |  |--fantastic-data.csv
+ |  |  |--fantastic-data_schema.csv
+@@ -57,6 +58,8 @@ All new statistics and machine learning are created in FOSS
+ |  |  |--fig-2.tiff
+ |  |  |--table-1.tiff
+ |  |  |--table-2.tiff
++|  |--\test
++|  |  |--test-my-code.py
+ ```
+ 
+ ### X. Use virtual environments

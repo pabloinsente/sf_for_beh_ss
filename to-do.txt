@@ -1,1 +1,4 @@
+- add metrics for ML > text file
+- add metrics for NN > text file
+- add more test
 - Bash script

@@ -1,0 +1,21 @@
+wandb_version: 1
+
+C:
+  desc: null
+  value: 1.0
+_wandb:
+  desc: null
+  value:
+    cli_version: 0.8.16
+    framework: sklearn
+    is_jupyter_run: false
+    python_version: 3.7.3
+penalty:
+  desc: null
+  value: l2
+seed:
+  desc: null
+  value: 100
+test_size:
+  desc: null
+  value: 0.3

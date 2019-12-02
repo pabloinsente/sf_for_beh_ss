@@ -44,9 +44,11 @@ All new statistics and machine learning are created in FOSS
 |  |README.md
 |  |LICENSE.txt
 |  |requirements.txt
-|  |--\code
+|  |to-do.txt
+|  |--\src
 |  |  |--cool-script.py
 |  |  |--helper-script.py
+|  |  |--run-experiment.sh
 |  |--\data
 |  |  |--fantastic-data.csv
 |  |  |--fantastic-data_schema.csv
@@ -57,6 +59,8 @@ All new statistics and machine learning are created in FOSS
 |  |  |--fig-2.tiff
 |  |  |--table-1.tiff
 |  |  |--table-2.tiff
+|  |--\test
+|  |  |--test-my-code.py
 ```
 
 ### X. Use virtual environments

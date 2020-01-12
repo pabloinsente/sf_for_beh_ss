@@ -1,0 +1,13 @@
+diff --git a/src/nn.py b/src/nn.py
+index f1670d9..f13012d 100644
+--- a/src/nn.py
++++ b/src/nn.py
+@@ -22,7 +22,7 @@ config.test_size = 0.3
+ config.activation = 'relu'
+ config.optimizer = 'adam'
+ config.seed = 100
+-config.hidden_layer_size = 128
++config.hidden_layer_size = 200
+ 
+ # import dataset
+ tech = pd.read_csv('../data/mental_health_tech_data_post.csv')

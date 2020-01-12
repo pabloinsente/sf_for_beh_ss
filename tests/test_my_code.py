@@ -1,4 +1,4 @@
-from src.stats import critical_value
+from src.stats_helper import critical_value
 
 def test_valid_chi_2():
     # set up

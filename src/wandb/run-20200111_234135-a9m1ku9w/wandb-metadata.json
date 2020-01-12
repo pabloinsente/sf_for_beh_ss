@@ -1,0 +1,23 @@
+{
+    "root": "/home/pablo/Desktop/testing_turorial/my_awesome_project",
+    "program": "nn.py",
+    "git": {
+        "remote": "https://github.com/pabloinsente/tmp_repo.git",
+        "commit": "538a3b14c8c832265cc8d81f9e3b9234a1a59fc6"
+    },
+    "email": "pcaceres@wisc.edu",
+    "startedAt": "2020-01-11T23:41:35.760370",
+    "host": "jarvis",
+    "username": "pablo",
+    "executable": "/home/pablo/Desktop/testing_turorial/my_awesome_project/venv/bin/python",
+    "os": "Linux-5.0.0-37-generic-x86_64-with-debian-buster-sid",
+    "python": "3.7.0",
+    "cpu_count": 8,
+    "args": [],
+    "state": "finished",
+    "jobType": null,
+    "mode": "run",
+    "project": "my-awesome-project",
+    "heartbeatAt": "2020-01-11T23:41:47.380198",
+    "exitcode": 0
+}

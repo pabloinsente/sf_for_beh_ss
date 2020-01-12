@@ -12,7 +12,6 @@ import wandb
 from wandb.keras import WandbCallback
 from datetime import date
 
-
 # logging code
 wandb.init(project="my-awesome-project")
 config = wandb.config # Config is a variable that holds and saves hyperparameters and inputs

@@ -35,4 +35,3 @@ def critical_value(prob, df, Chi_square):
 
 prob = 0.95
 critical_value_interpretation =  critical_value(prob, df, Chi_square)
-

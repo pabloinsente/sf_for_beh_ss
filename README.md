@@ -3,13 +3,13 @@
 **Author**: Pablo Caceres  
 **Contact**: pcaceres@wisc.edu  
 
-Research in the behavioral and social sciences (B&SS) is **increasingly relying on complex computational procedures**. Nonetheless, researchers in the B&SS usually have **little formal training** in software development in the context of scientific computing. This situation limits researchers ability to produce data processing pipelines that are **reproducible, reusable, reliable, maintainable, extensible, and shareable** with the wider scientific community. Introducing a **set of practices and tools from software development** can significantly help to alleviate this situation and improve the long-term sustainability of research that relies on heavy computation.
+Research in the behavioral and social sciences (B&SS) is **increasingly relying on complex computational procedures**. Nonetheless, researchers in the B&SS usually have **little formal training** in software development in the context of scientific computing. This situation limits researchers' ability to produce data processing pipelines that are **reproducible, reusable, reliable, maintainable, extensible, and shareable** with the wider scientific community. Introducing a **set of practices and tools from software development** can significantly help to alleviate this situation and improve the long-term sustainability of research that relies on heavy computation.
 
-In this talk, I provide a **selection of practices and tools** requiring relatively **low effort** in exchange of **high impact** on improving researchers computational workflows. I also provide a **minimal example** illustrating the application of this simple principles in a end-to-end data analysis project.
+In this talk, I provide a **selection of practices and tools** requiring relatively **low effort** in exchange of **high impact** on improving researchers' computational workflows. I also provide a **minimal example** illustrating the application of these simple principles in an end-to-end data analysis project.
 
 ## Getting started
 
-In this tutorial we will reproduce the contents of this repo ste-by-step. Therefore, it is recommended to create a directory to host both the `sf_for_beh_ss` repo and your own reproduction. To do this, run in the command line:
+In this tutorial, we will reproduce the contents of this repo step-by-step. Therefore, it is recommended to create a directory to host both the `sf_for_beh_ss` repo and your reproduction. To do this, run in the command line:
 
 ```Git
 # make the directory
@@ -43,7 +43,7 @@ If you have a different python version, go and install [python 3.7](https://www.
 
 ## Usage
 
- Python scripts and jupyter notebooks are provided in the ```/src``` directory. The step by step instructions are next in this document.
+ Python scripts and jupyter notebooks are provided in the ```/src``` directory. The step-by-step instructions are next in this document.
 
 ## Tutorial Outline
 
@@ -51,7 +51,7 @@ If you have a different python version, go and install [python 3.7](https://www.
 2. Using virtual environments
 3. Using version control systems
 4. Example 1: Writing a basic reproducible script
-5. Example 2: Setting up machine learning experiment tracking
+5. Example 2: Setting up a machine learning experiment tracking
 6. Testing your code
 7. Summary and conclusions
 8. Resources to learn more
@@ -62,13 +62,13 @@ If you have a different python version, go and install [python 3.7](https://www.
 
 In the social sciences, it is common to find code repositories where everything is dump into the same directory: data, code, charts, manuscripts, etc. I've done this multiple times in the past and I regret it. There are many ways in which you can organize your projects. We'll generate a repository structure based on a few conventions around software development. We'll use the command line to populate our project.
 
-**Note about the command line**: using the command line may be confusing. It can make you feel like you'd break your computer if you make a typo. You can make your experience better by installing an alternative terminal in your system. Alternative terminals add multiple capabilities like autocomplete, coloring, easy copy-pase, multiple terminals in the same window, and more. Here a few options:
+**Note about the command-line**: using the command-line may be confusing. It can make you feel like you'd break your computer if you make a typo. You can make your experience better by installing a terminal emulator in your computer. Terminal emulators add multiple capabilities like autocomplete, coloring, easy copy-paste, multiple terminals in the same window, and more. Here a few options:
 
 - Linux: [Tilix](https://gnunn1.github.io/tilix-web/)
 - MacOS: [iterm2](https://iterm2.com/index.html)
 - Windows: [cmder](https://cmder.net//)
 
-**About learning to use the terminal/shell**: learning to use the shell is beyond the scope of this tutorial. There are many good resources out there for this (see [here](https://github.com/awesome-lists/awesome-bash)), but the trick is just using it as much as you can for your day-to-day tasks (and googling). There a few commands worth mentioning for this tutorial:
+**About learning to use the command-line**: learning to use the command-line and bash is beyond the scope of this tutorial. There are many good resources out there for this (see [here](https://github.com/awesome-lists/awesome-bash)), but the trick is just using it as much as you can for your day-to-day tasks (and googling). There a few commands worth mentioning for this tutorial:
 
 - `cd`: change directory
 - `mkdir`: make a directory
@@ -92,7 +92,7 @@ cd my_awesome_project
 
 At the root of your project, it's usually expected to see at least three elements:
 
-- **README.md**: think on this as the abstract of a paper plus instructions about installation and usage.
+- **README.md**: think about this as the abstract of a paper plus instructions about installation and usage.
 - **requirements.txt**: to indicate the required software dependencies (using pip). More about this later.
 - **LICENSE.txt**: to inform potential users about the usability of your code. GitHub provides a guide about how to chose a License [here](https://help.github.com/en/github/creating-cloning-and-archiving-repositories/licensing-a-repository), and how to add one [here](https://help.github.com/en/github/building-a-strong-community/adding-a-license-to-a-repository)
 
@@ -159,7 +159,7 @@ Virtual environments are a way to isolate the software requirements for your pro
 
 Using virtual environments is a good idea because they **avoid interference between the dependencies of multiple projects** living in your system. They also **avoid altering dependencies of your system installation** of python. Finally, they also **facilitate reproducibility** of your projects by specifying the environment in which your code was run.
 
-**Note about environments and dependencies**: other programming languages like R, Julia, etc., have their own solutions for environment isolation and dependency managment. Today's examples are based on python. If you need to use multiple programming languages, the best solution is to use Docker containers, in which you can "package" your whole software system: code, runtime, system tools, system libraries and settings, to be reproduced in another machine. Docker is beyond the scope of this tutorial. You can learn more [here](https://www.docker.com/resources/what-container), [here](https://www.youtube.com/watch?v=Q2u1wcfmlzw), and [here](https://www.youtube.com/watch?v=gBalsA-x300).
+**Note about environments and dependencies**: other programming languages like R, Julia, etc., have their own solutions for environment isolation and dependency management. Today's examples are based on python. If you need to use multiple programming languages, the best solution is to use Docker containers, in which you can "package" your whole software system: code, runtime, system tools, system libraries and settings, to be reproduced in another machine. Docker is beyond the scope of this tutorial. You can learn more [here](https://www.docker.com/resources/what-container), [here](https://www.youtube.com/watch?v=Q2u1wcfmlzw), and [here](https://www.youtube.com/watch?v=gBalsA-x300).
 
 There are multiple alternatives to create virtual environments in python. We'll use [**venv**](https://docs.python.org/3/library/venv.html) because of it's lightweight and simple to use.
 
@@ -171,7 +171,7 @@ In the root of your project directory type:
 python3 -m venv venv
 ```
 
-**Note**: if you're not sure where in your file system is your terminal, type to see the path:
+**Note**: if you're not sure where in your file system is your terminal, type this to see the path:
 
 ```terminal
 pwd
@@ -199,7 +199,7 @@ The output should point to your current directory. It should look similar to:
 /home/yourname/Desktop/my_awesome_project/venv/bin/python
 ```
 
-As long as your venv is active, python will go to that directory to search for dependencies, and pip will install dependencies in there as well.
+As long as your venv is active, python will go to that directory to search for dependencies, and `pip` will install dependencies in there as well.
 
 #### 2.4 Check installed packages
 
@@ -214,13 +214,13 @@ The output should look similar to this (Version may vary):
 | pip        | 19.2.3  |
 | setuptools | 41.2.0  |
 
-If you see more packages, your pip installation it is probably not pointing to the `/venv` directory (this often happens when you forget to activate your venv).
+If you see more packages, your pip installation is probably not pointing to the `/venv` directory (this often happens when you forget to activate your venv).
 
 Once we have the venv **activated** (this is easy to forget), we can safely install dependecies using pip.
 
 #### 2.5 Installing packages
 
-One way to install packages is to simply type `pip name-package`. A better way, is to specify the package name and version in the **requirements.txt** file. Open the file in vscode by typing `code requirements.txt`, and copy-paste:
+One way to install packages is to simply type `pip name-package`. A better way is to specify the package name and version in the **requirements.txt** file. Open the file in vscode by typing `code requirements.txt`, and copy-paste:
 
 ```Python
 altair==4.0.0
@@ -243,7 +243,7 @@ Before installing dependencies, check the pip version by
 pip --version
 ```
 
-If you see a version older than `19.2.3`, go an upgrade with:
+If you see a version older than `19.2.3`, upgrade with:
 
 ```bash
 pip install --upgrade pip
@@ -293,11 +293,11 @@ my_analysis_script_2_this_is_the_last_one.py
 
 ...you may need to use version control. There are many version control systems around (Subversion, Mercurial, etc), but Git is the most popular by far.
 
-**What is Git**: Git is a version control software managing, tracking, and logging your code in your machine. Git is commonly used along with GitHub as hosting service.
+**What is Git**: Git is a version control software managing, tracking, and logging your code in your machine. Git is commonly used along with GitHub as a hosting service.
 
-**What is GitHub**: GitHub is a hosting service for Git. Basically, it allows to save everything related to your project in the cloud instead of your own machine.
+**What is GitHub**: GitHub is a hosting service for Git. It allows for saving everything related to your project in the cloud instead of your own machine.
 
-Learning Git may take a while. Fortunatelly, there are relatively few commands needed to track your projects effectively. The rest can be googled as needed.
+Learning Git may take a while. Fortunately, there are relatively few commands needed to track your projects effectively. The rest can be googled as needed.
 
 #### 3.1 Check git installation
 
@@ -354,7 +354,7 @@ touch .gitignore
 
 The `.gitignore` file tells to git: **"DON'T track this files"**. Whatever you put in there, should not appear in GitHub later.
 
-**Populating .gitignore**: adding files to be ignored to .gitignore may be repetitive. We'll use [this webpage](https://www.gitignore.io/) to automatically generate .gitignore files based on the dependencies we're using. Once in the page, ask for `python`, `jupyter`, and `venv` in the search bar. Then copy-paste the generated text into your own `.gitignore`
+**Populating .gitignore**: adding files to be ignored to .gitignore may be repetitive. We'll use [this webpage](https://www.gitignore.io/) to automatically generate .gitignore files based on the dependencies we're using. Once on the page, ask for `python`, `jupyter`, and `venv` in the search bar. Then copy-paste the generated text into your own `.gitignore`
 
 ```bash
 code .gitignore
@@ -366,7 +366,7 @@ code .gitignore
 git add -A
 ```
 
-This stages the files to be committed. This is how we tell git: **"prepare this files to be commited"**. The "-A" flag stands for "all changes"
+This stages the files to be committed. This is how we tell git: **"prepare these files to be committed"**. The "-A" flag stands for "all changes"
 
 #### 3.6 Commit files
 
@@ -374,11 +374,11 @@ This stages the files to be committed. This is how we tell git: **"prepare this 
 git commit -m "First commit"
 ```
 
-Commit prepares the added files to be pushed to the remote repository. This is how we tell git: **"save this changes locally, I'll send them to GitHub later"**. The "-m" flag (shor for --message) attach a commentary to your commit. This is useful to record what changes you made to your code.
+Commit prepares the added files to be pushed to the remote repository. This is how we tell git: **"save these changes locally, I'll send them to GitHub later"**. The "-m" flag (short for --message) attach commentary to your commit. This is useful to record what changes you made to your code.
 
 #### 3.7 Creating a remote repository
 
-In order to push our files to our remote repository, we need to create one in the first place.
+To push our files to our remote repository, we need to create one in the first place.
 
 Go to [https://github.com/](https://github.com/) and create a new **empty repository** (don't add README or LICENSE). Then copy the remote repository URL.
 
@@ -411,7 +411,7 @@ Now we are ready to push our changes to GitHub (our remote bucket for git and ou
 git push origin master
 ```
 
-This should prompt you enter your `username` and `password`.
+This should prompt to you enter your `username` and `password`.
 
 **Note about connecting to GitHub**: If you `push` and `fetch` a lot, you may want to avoid typing your username and password every time by connecting to GitHub with SSH. [Here](https://help.github.com/en/github/authenticating-to-github/connecting-to-github-with-ssh) is a GitHub guide about how to configure SSH.
 
@@ -425,7 +425,7 @@ We have accomplished three things:
 2. An isolated virtual environment to manage our dependencies
 3. A version control system to track our progress
 
-Now we need some **code that processes data in automated and reproducible fashion**. We will walk through the `eda.ipynb` and `stats_example.py` files to see an example of how this may work. You just need to copy-past them from the workshop repo `sf_for_beh_ss/src` into your own `my_awesome_project/src` directory. Remember also to copy-paste the `mental_health_tech_data.csv` from `sf_for_beh_ss/data` to your `my_awesome_project/data`
+Now we need some **code that processes data in automated and reproducible fashion**. We will walk through the `eda.ipynb` and `stats_example.py` files to see an example of how this may work. You just need to copy-paste them from the workshop repo `sf_for_beh_ss/src` into your own `my_awesome_project/src` directory. Remember also to copy-paste the `mental_health_tech_data.csv` from `sf_for_beh_ss/data` to your `my_awesome_project/data`
 
 Assuming that `sf_for_beh_ss` and `my_awesome_project` are under the same directory, you can copy-paste by running:
 
@@ -493,7 +493,7 @@ git commit -m "stats results"
 git push origin master
 ```
 
-Machine learning usually entails many rounds of iterating over different hyper-parameters, architechtures, data partitions, etc. This makes really hard to keep track of your experiments and metrics over time, which may hinder reproducibility. Several tools has been created recently to tackle this issue (e.g., MLflow, Comet, etc). In our case, we will use [Weight & Biases](https://www.wandb.com/) to showcase a very simple example of how this might work.
+Machine learning usually entails many rounds of iterating over different hyper-parameters, architectures, data partitions, etc. This makes hard to keep track of your experiments and metrics over time, which may hinder reproducibility. Several tools have been created recently to tackle this issue (e.g., MLflow, Comet, etc). In our case, we will use [Weight & Biases](https://www.wandb.com/) to showcase a very simple example of how this might work.
 
 #### 5.1 To install Weight and Biases
 
@@ -511,7 +511,7 @@ wandb login
 
 This should prompt you to Log in. If you don't have an account, create one and Log in. Follow the instructions and **past the key to the command line**. If you did this right, you should see a `Successfully logged in to Weights & Biases!` message.
 
-Since we don't have time to write a ML pipeline, we will use scripts provided in the `/src` folder of the workshop repo, and add some code to those scripts to make things work. Again, copy and paste `ml.py` and `nn.py` from `sf_for_beh_ss/src` into your own `my_awesome_project/src`. Then open the files in vscode:
+Since we don't have time to write an ML pipeline, we will use scripts provided in the `/src` folder of the workshop repo, and add some code to those scripts to make things work. Again, copy and paste `ml.py` and `nn.py` from `sf_for_beh_ss/src` into your own `my_awesome_project/src`. Then open the files in vscode:
 
 ```vscode
 code ml.py nn.py
@@ -562,7 +562,7 @@ To run the tensorflow/keras example:
 python nn.py
 ```
 
-If the scripts ran successfully, wandb will generate a url where you can see the project data and metrics online.
+If the scripts ran successfully, wandb will generate a URL where you can see the project data and metrics online.
 
 ### 6. Testing your code
 
@@ -574,7 +574,7 @@ git commit -m "ml results"
 git push origin master
 ```
 
-Code testing is an uncommon, yet very important part of writing software for scientific computing in a reliable and reprodicible fashion. There are multiple frameworks in the python ecosystem for this. We will use `pytest` because of its simplicity and popularity.
+Code testing is an uncommon, yet very important part of writing software for scientific computing in a reliable and reproducible fashion. There are multiple frameworks in the python ecosystem for this. We will use `pytest` because of its simplicity and popularity.
 
 #### 6.1 To install pytest run
 
@@ -605,7 +605,7 @@ To run the unit test:
 pytest
 ```
 
-The pytest output should output something like this (if successful)
+The pytest output should output something like this (if successful):
 
 ```console
 =========1 passed in 0.51s=========
@@ -628,14 +628,14 @@ By combining all these elements, we created a project workflow that is:
 - **maintainable**: easy to fix
 - **extensible**: easy to add extra functionality
 - **shareable**: others can clone my repo and run your script easily
-- **reliable**: you can trust your results (with appropiate testing)
+- **reliable**: you can trust your results (with appropriate testing)
 - **reproducible**: others can produce the same results given the same data and dependencies
 
-Of course, this is a minimal and very simple example. All the attributes that we mentioned (reusability, reproducibility, etc) are not a matter of all of nothing, but **guiding principles**. Our hope that **the practices and tools used in this tutorial contribute to get closer to such ideals**.
+Of course, this is a minimal and very simple example. All the attributes that we mentioned (reusability, reproducibility, etc) are not a matter of all of nothing, but **guiding principles**. Our hope that **the practices and tools used in this tutorial contribute to getting closer to such ideals**.
 
 ### 8. Resources to learn more
 
-Software development is an enormous field with a lot to offer to people doing computationally intensive research. In this tutorial the mantra was to provide guidance in a **minimal set of practices and tools**. Below you can find a list of resources to learn more
+Software development is an enormous field with a lot to offer to people doing computationally intensive research. In this tutorial, the mantra was to provide a **minimal set of practices and tools**. Below you can find a list of resources to learn more
 
 #### Virtual environments
 

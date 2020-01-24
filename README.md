@@ -99,7 +99,7 @@ At the root of your project, it's usually expected to see at least three element
 Let's add the files:
 
 ```Bash
-touch README.md requirements.txt
+touch README.md requirements.txt LICENSE.txt
 ```  
 
 **README.md content**: creating README files is repetitive. We'll use this template to add our content:
@@ -112,15 +112,15 @@ touch README.md requirements.txt
 ## Installation
 
 ## Usage
-
-## License
 ```
 
 To open the README.md in VS Code:
 
 ```bash
-code README.md
+code README.md LICENSE.txt
 ```
+
+To add the contents of your License, we can use this [site](https://choosealicense.com/)
 
 Copy-paste the template and save it once you're done.
 

@@ -387,7 +387,7 @@ Go to [https://github.com/](https://github.com/) and create a new **empty reposi
 To connect our local repository with our remote one, run this replacing **<GITHUB_URL>** with your remote URL:
 
 ```git
-git remote add origin remote repository <GITHUB_URL>
+git remote add origin <GITHUB_URL>
 ```
 
 #### 3.9 Check new remote

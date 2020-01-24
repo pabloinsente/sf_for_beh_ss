@@ -68,14 +68,13 @@ This talk is not about the best way of writing code
 This is not about the best software stack to do projects
 
 <br>
-This is not about statistical procedures or machine learning
+This is not about statistical procedures or machine learning algorithms
 
 <br>
 This is not about large scale projects (HPC, HTC, cloud computing, etc)
 
 <br>
 Yet, a few tips are offered
-
 
 ***
 
@@ -89,13 +88,13 @@ Is about practices and tools that can help to accomplish the following goals:
 *_Reproducibility_*: others can reproduce my results given the same data and software environment
 
 <br>
-*_Reusability_*: I can par of my code base for other projects
+*_Reusability_*: I can reuse part of my code base for other projects
 
 <br>
 *_Reliability_*: I can trust my results
 
 <br>
-*_Maintainability_*: my code us easy to fix and change
+*_Maintainability_*: my code is easy to fix and change
 
 <br>
 *_Extensibility_*: I can easily add additional functionality

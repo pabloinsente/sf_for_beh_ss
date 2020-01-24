@@ -1,24 +1,24 @@
 import pandas as pd
 from scipy import stats
 import numpy as np
-import stats_helper
+import stats_helper as sh
 
-# Test hypothesis that there is a relationship between having a family history of menta health issues and seeking treatment for mental health
+# Test hypothesis that there is a relationship between having a family history of mental health issues and seeking treatment for mental health
 
-# load data
-tech = stats_helper.read_in('../data/mental_health_tech_data_post.csv')
+# Step 1: read data in
+tech = sh.read_in('../data/mental_health_tech_data_post.csv')
 
-# create contingency table
-crosstab = stats_helper.contigency_table()
+# Step 2: create contingency table
+crosstab = sh.contigency_table(tech, 'treatment', 'family_history')
 
-# run chi^2 test
-Chi_square, p_value, df, exp_freq = stats_helper.run_chi2_test(crosstab)
+# Step 3: run chi^2 test
+Chi_square, p_value, df, exp_freq = sh.run_chi2_test(crosstab)
 
-# compute critical value to interpret test-statistic
+# Step 4: compute critical value to interpret test-statistic
 prob = 0.95
-critical_value_interpretation = stats_helper.critical_value(prob, df, Chi_square)
+critical_value_interpretation = sh.critical_value(prob, df, Chi_square)
 
-# print to stdout and text file in ../results
+# Step 5: print to stdout
 print(f'Pearson Chi-square: {Chi_square}')
 print(f'P-value: {p_value}') 
 print(f'Degrees of freedom: {df}') 

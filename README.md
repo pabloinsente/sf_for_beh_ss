@@ -5,7 +5,7 @@
 
 Research in the behavioral and social sciences (B&SS) is **increasingly relying on complex computational procedures**. Nonetheless, researchers in the B&SS usually have **little formal training** in software development in the context of scientific computing. This situation limits researchers' ability to produce data processing pipelines that are **reproducible, reusable, reliable, maintainable, extensible, and shareable** with the wider scientific community. Introducing a **set of practices and tools from software development** can significantly help to alleviate this situation and improve the long-term sustainability of research that relies on heavy computation.
 
-In this talk, I provide a **selection of practices and tools** requiring relatively **low effort** in exchange of **high impact** on improving researchers' computational workflows. I also provide a **minimal example** illustrating the application of these simple principles in an end-to-end data analysis project.
+In this talk, I provide a **selection of practices and tools** requiring relatively **low effort** in exchange of **high impact** on improving researchers' computational work-flows. I also provide a **minimal example** illustrating the application of these simple principles in an end-to-end data analysis project.
 
 ## Getting started
 
@@ -25,7 +25,7 @@ To run the examples, you'll need **python 3.7** installed in a **Linux/Mac machi
 For **Windows users**, there are two ways to make the code work:
 
 - Installing [**cygwin**](https://www.cygwin.com/) and running everything from the cygwin console
-- Installing the **Ubuntu 18.04 LTS distribution** in the [Windows subsystem for Linux](https://docs.microsoft.com/en-us/windows/wsl/install-win10). If you use this option, you'll need to type this to access your Windows Desktop files (replace yourName with your username):
+- Installing the **Ubuntu 18.04 LTS distribution** in the [Windows subsystem for Linux](https://docs.microsoft.com/en-us/windows/wsl/install-win10). If you use this option, you'll need to type this to access your Windows Desktop files (replace **yourName** with your user-name):
 
 ```bash
 cd /mnt/c/Users/yourName/Desktop
@@ -35,15 +35,15 @@ Check your python installation by typing in the command line:
 
 ```bash
 python --version
-```  
+```
 
 If you have a different python version, go and install [python 3.7](https://www.python.org/downloads/). Look under the *"Looking for a specific release?"* section.
 
-**Python tip**: managing multiple versions of python may be messy. One solution is to use [pyenv](https://github.com/pyenv/pyenv). Here is an [excellent tutorial](https://realpython.com/intro-to-pyenv/) about installing and using pyenv in multiple OS.
+**Python tip**: managing multiple versions of python may be messy. One solution is to use [pyenv](https://github.com/pyenv/pyenv). Here is an [excellent tutorial](https://realpython.com/intro-to-pyenv/) about installing and using `pyenv` in multiple OS.
 
 ## Usage
 
- Python scripts and jupyter notebooks are provided in the ```/src``` directory. The step-by-step instructions are next in this document.
+ Python scripts and Jupyter notebooks are provided in the ```/src``` directory. The step-by-step instructions are next in this document.
 
 ## Tutorial Outline
 
@@ -62,13 +62,13 @@ If you have a different python version, go and install [python 3.7](https://www.
 
 In the social sciences, it is common to find code repositories where everything is dump into the same directory: data, code, charts, manuscripts, etc. I've done this multiple times in the past and I regret it. There are many ways in which you can organize your projects. We'll generate a repository structure based on a few conventions around software development. We'll use the command line to populate our project.
 
-**Note about the command-line**: using the command-line may be confusing. It can make you feel like you'd break your computer if you make a typo. You can make your experience better by installing a terminal emulator in your computer. Terminal emulators add multiple capabilities like autocomplete, coloring, easy copy-paste, multiple terminals in the same window, and more. Here a few options:
+**Note about the command-line**: using the command-line may be confusing. It can make you feel like you'd break your computer if you make a typo. You can make your experience better by installing a terminal emulator in your computer. Terminal emulators add multiple capabilities like auto-complete, coloring, easy copy-paste, multiple terminals in the same window, and more. Here a few options:
 
 - Linux: [Tilix](https://gnunn1.github.io/tilix-web/)
-- MacOS: [iterm2](https://iterm2.com/index.html)
+- Mac-OS: [iterm2](https://iterm2.com/index.html)
 - Windows: [cmder](https://cmder.net//)
 
-**About learning to use the command-line**: learning to use the command-line and bash is beyond the scope of this tutorial. There are many good resources out there for this (see [here](https://github.com/awesome-lists/awesome-bash)), but the trick is just using it as much as you can for your day-to-day tasks (and googling). There a few commands worth mentioning for this tutorial:
+**About learning to use the command-line**: learning to use the command-line and bash is beyond the scope of this tutorial. There are many good resources out there for this (see [here](https://github.com/awesome-lists/awesome-bash)), but the trick is just using it as much as you can for your day-to-day tasks (and goggling). There a few commands worth mentioning for this tutorial:
 
 - `cd`: change directory
 - `mkdir`: make a directory
@@ -100,7 +100,7 @@ Let's add the files:
 
 ```Bash
 touch README.md requirements.txt LICENSE.txt
-```  
+```
 
 **README.md content**: creating README files is repetitive. We'll use this template to add our content:
 
@@ -130,7 +130,7 @@ It is good idea to separate every element of your project into sub-directories:
 
 ```Bash
 mkdir src data docs results tests
-```  
+```
 
 We will add some fillers files to our directories in the meantime:
 
@@ -205,7 +205,7 @@ As long as your venv is active, python will go to that directory to search for d
 
 ```Python
 pip list
-```  
+```
 
 The output should look similar to this (Version may vary):
 
@@ -216,7 +216,7 @@ The output should look similar to this (Version may vary):
 
 If you see more packages, your pip installation is probably not pointing to the `/venv` directory (this often happens when you forget to activate your venv).
 
-Once we have the venv **activated** (this is easy to forget), we can safely install dependecies using pip.
+Once we have the venv **activated** (this is easy to forget), we can safely install dependencies using pip.
 
 #### 2.5 Installing packages
 
@@ -297,7 +297,7 @@ my_analysis_script_2_this_is_the_last_one.py
 
 **What is GitHub**: GitHub is a hosting service for Git. It allows for saving everything related to your project in the cloud instead of your own machine.
 
-Learning Git may take a while. Fortunately, there are relatively few commands needed to track your projects effectively. The rest can be googled as needed.
+Learning Git may take a while. Fortunately, there are relatively few commands needed to track your projects effectively. The rest can be goggled as needed.
 
 #### 3.1 Check git installation
 
@@ -413,7 +413,7 @@ git push origin master
 
 This should prompt to you enter your `username` and `password`.
 
-**Note about connecting to GitHub**: If you `push` and `fetch` a lot, you may want to avoid typing your username and password every time by connecting to GitHub with SSH. [Here](https://help.github.com/en/github/authenticating-to-github/connecting-to-github-with-ssh) is a GitHub guide about how to configure SSH.
+**Note about connecting to GitHub**: If you `push` and `fetch` a lot, you may want to avoid typing your user-name and password every time by connecting to GitHub with SSH. [Here](https://help.github.com/en/github/authenticating-to-github/connecting-to-github-with-ssh) is a GitHub guide about how to configure SSH.
 
 After pushing, If you go to your GitHub repo, you should see the added changes.
 
@@ -432,10 +432,9 @@ Assuming that `sf_for_beh_ss` and `my_awesome_project` are under the same direct
 ```bash
 cp ../sf_for_beh_ss/src/eda.ipynb ../sf_for_beh_ss/src/stats_example.py ./src
 cp ../sf_for_beh_ss/data/mental_health_tech_data.csv ./data
-
 ```
 
-#### 4.1 Jupter Notebook (`eda.ipynb`) instructions
+#### 4.1 Jupyter Notebook (`eda.ipynb`) instructions
 
 From the root of your repository run:
 
@@ -463,10 +462,30 @@ cd src
 code stats_example.py stats_refactor.py stats_helper.py
 ```
 
-Further instructions will be given in the workshop. Once you're done, run:
+To run the `stats_example.py`:
+
+```python
+python stats_example.py
+```
+
+The output should look like:
+
+```console
+Pearson Chi-square: 175.95516961872426
+P-value: 0.0
+Degrees of freedom: 1
+Test interpretation: reject null hypothesis
+Expected frequencies
+             No         Yes
+No   377.040767  241.959233
+Yes  384.959233  247.040767
+
+```
+
+Now we will refactor the `stats_example.py` file by separating the **functions** (`stats_helper.py`) and the **function calls**  (`stats_refactor.py`). Further instructions will be given in the workshop. Once you're done, run:
 
 ```bash
-stats_refactor.py # to print to the console
+python stats_refactor.py # to print to the console
 python stats_refactor.py > ../results/chi2.txt # to print to a .txt file
 ```
 
@@ -493,11 +512,11 @@ git commit -m "stats results"
 git push origin master
 ```
 
-Machine learning usually entails many rounds of iterating over different hyper-parameters, architectures, data partitions, etc. This makes hard to keep track of your experiments and metrics over time, which may hinder reproducibility. Several tools have been created recently to tackle this issue (e.g., MLflow, Comet, etc). In our case, we will use [Weight & Biases](https://www.wandb.com/) to showcase a very simple example of how this might work.
+Machine learning usually entails many rounds of **iterating** over multiple hyper-parameters, architectures, data partitions, etc. This makes hard to **keep track** of your experiments and metrics over time, which may **hinder reproducibility**. Several tools have been created recently to tackle this issue (e.g., MLflow, Comet, etc). In our case, we will use [Weight & Biases](https://www.wandb.com/) to showcase a very simple example of how this might work.
 
 #### 5.1 To install Weight and Biases
 
-This should be installed already (if you pip installed the requirements.txt). Otherwise, it can be installed by:
+This should be installed already (if you pip installed the `requirements.txt`). Otherwise, it can be installed by:
 
 ```Python
 pip install wandb
@@ -511,10 +530,16 @@ wandb login
 
 This should prompt you to Log in. If you don't have an account, create one and Log in. Follow the instructions and **past the key to the command line**. If you did this right, you should see a `Successfully logged in to Weights & Biases!` message.
 
-Since we don't have time to write an ML pipeline, we will use scripts provided in the `/src` folder of the workshop repo, and add some code to those scripts to make things work. Again, copy and paste `ml.py` and `nn.py` from `sf_for_beh_ss/src` into your own `my_awesome_project/src`. Then open the files in vscode:
+Since we don't have time to write an ML pipeline, we will use scripts provided in the `/src` folder of the workshop repo, and add some code to those scripts to make things work. Again, copy and paste `ml.py` and `nn.py` from `sf_for_beh_ss/src` into your own `my_awesome_project/src`. 
 
-```vscode
-code ml.py nn.py
+```bash
+cp ../sf_for_beh_ss/src/ml.py ../sf_for_beh_ss/src/nn.py ./src
+```
+
+Then open the files in vscode:
+
+```bash
+code ./src/ml.py ./src/nn.py
 ```
 
 #### 5.3 Tracking configuration and metrics
@@ -533,9 +558,7 @@ config = wandb.config # Config is a variable that holds and saves hyperparameter
 config.epochs = 100
 config.dropout = 0.2
 ...
-
 # Step 4: tell wandb to log the experiment configuration and metrics
-
 # For instance, at the end of a Keras model, we just need to add a Wandb Callback
 
 # fit the model
@@ -550,19 +573,28 @@ Weight & Biases support multiple python frameworks: Scikit-learn, Tensorflow, Ke
 
 #### 5.4 Run the examples
 
-To run the scikit-learn example:
+To run the scikit-learn example. Navigate to the `src/` directory and run
 
 ```Python
+cd src/
 python ml.py
 ```
 
-To run the tensorflow/keras example:
+If successful, wand should output something like:
+
+```bash
+wandb: Synced some-funny-name: https://app.wandb.ai/username/projectname/runs/hasg-number
+```
+
+Then, you can click in that link to see your results.
+
+To run the Tensorflow/Keras example:
 
 ```Python
 python nn.py
 ```
 
-If the scripts ran successfully, wandb will generate a URL where you can see the project data and metrics online.
+If the scripts ran successfully, wandb will generate a URL where you can see the project data and metrics on-line.
 
 ### 6. Testing your code
 
@@ -578,7 +610,7 @@ Code testing is an uncommon, yet very important part of writing software for sci
 
 #### 6.1 To install pytest run
 
-This should be installed already (if you pip installed the requirements.txt). Otherwise, it can be installed by:
+This should be installed already (if you pip installed the `requirements.txt`). Otherwise, it can be installed by:
 
 ```bash
 pip install pytest
@@ -592,7 +624,13 @@ pytest --version
 
 Again, you just need to copy-paste the `test_my_code.py` file from `sf_for_beh_ss/tests` into your own `my_awesome_project/tests`
 
-`pytest` works by searching for files that have **test_something.py** or **something_test.py** (note the **"test"** keyword), and running any function or method beginning with **"test"**. Let's check our unit-test contents before running:
+```bash
+cp ../sf_for_beh_ss/tests/test_my_code.py ./tests
+```
+
+
+
+`pytest` works by searching for files that have ``test_something.py`` or ``something_test.py`` (note the **"test"** keyword), and running any function or method beginning with **"test"**. Let's check our unit-test contents before running:
 
 ```bash
 cd tests
@@ -617,7 +655,7 @@ In this tutorial, we have accomplished the following:
 
 1. A project structure
 2. An isolated virtual environment to manage our dependencies
-3. A version control system to track our progress
+3. A version control system to track our progress and changes
 4. An automated data analysis script
 5. A machine learning experiment tracking system
 6. A semi-automated unit testing script
@@ -631,7 +669,7 @@ By combining all these elements, we created a project workflow that is:
 - **reliable**: you can trust your results (with appropriate testing)
 - **reproducible**: others can produce the same results given the same data and dependencies
 
-Of course, this is a minimal and very simple example. All the attributes that we mentioned (reusability, reproducibility, etc) are not a matter of all of nothing, but **guiding principles**. Our hope that **the practices and tools used in this tutorial contribute to getting closer to such ideals**.
+Of course, this is a **minimal and very simple example**. All the attributes that we mentioned (reliable, reproducible, etc) are not a matter of all of nothing, but **guiding principles**. Our hope that **the practices and tools used in this tutorial contribute to getting closer to such ideals**.
 
 ### 8. Resources to learn more
 

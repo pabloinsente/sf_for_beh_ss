@@ -96,7 +96,7 @@ subprocess32==3.5.4
 tabulate==0.8.6
 tensorboard==2.0.2
 tensorflow-estimator==2.0.1
-tensorflow==2.0.0
+tensorflow==2.5.0
 termcolor==1.1.0
 terminado==0.8.3
 testpath==0.4.4

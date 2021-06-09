@@ -62,7 +62,7 @@ pathtools==0.1.2
 patsy==0.5.1
 pexpect==4.7.0
 pickleshare==0.7.5
-pip==19.0.3
+pip==19.2
 prometheus-client==0.7.1
 promise==2.2.1
 prompt-toolkit==3.0.1

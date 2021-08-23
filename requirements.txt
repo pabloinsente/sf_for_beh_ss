@@ -1,5 +1,5 @@
 altair==4.0.0
-jupyterlab==1.2.4
+jupyterlab==1.2.21
 numpy==1.17.4
 pandas==0.25.3
 scikit-learn==0.21.3

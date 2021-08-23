@@ -39,7 +39,7 @@ jsonschema==3.2.0
 jupyter-client==5.3.4
 jupyter-core==4.6.1
 jupyterlab-server==1.0.6
-jupyterlab==1.2.3
+jupyterlab==1.2.21
 keras-applications==1.0.8
 keras-preprocessing==1.1.0
 lazy-object-proxy==1.4.3
